@@ -13,3 +13,7 @@ Config::set('defaultRoute', 'default');
 Config::set('defaultLanguage', 'en');
 Config::set('defaultController', 'pages');
 Config::set('defaultAction', 'index');
+
+Config::set('db.dsn', 'mysql:host=localhost;dbname=mvc');
+Config::set('db.user', 'root');
+Config::set('db.pass', 'root');

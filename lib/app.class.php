@@ -13,6 +13,8 @@ Class App {
     {
         self::$router = new Router($uri);
 
+        Lang::load(self::$router->getLanguage());
+
         $controllerClass = ucfirst(self::$router->getController().'Controller');
         $controllerMethod = self::$router->getMethodPrefix().self::$router->getAction();
         

@@ -27,3 +27,8 @@ function __autoload($className)
 	}
 
 }
+
+function __($key, $defaultValue = '')
+{
+	return Lang::get($key, $defaultValue);
+}
