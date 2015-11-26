@@ -4,6 +4,8 @@ Class App {
 
 	protected static $router;
 
+    public static $db;
+
     public static function getRouter()
     {
         return self::$router;
@@ -12,6 +14,9 @@ Class App {
     public static function run($uri)
     {
         self::$router = new Router($uri);
+
+        //self::$db = new DB(Config::get('db.dsn'), Config::get('db.user'), Config::get('db.pass'), Config::get('db.opt'));
+        self::$db = DB::getInstance();
 
         Lang::load(self::$router->getLanguage());
 
