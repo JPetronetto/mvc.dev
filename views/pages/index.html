@@ -1,3 +1,9 @@
-This is pages/index.html
-<br/>
-<?=$data['testContent']?>
+<?php foreach ($data['page'] as $pageData) { ?>
+
+	<div style="margin-top: 20px;">
+		
+		<a href="/pages/view/<?=$pageData['alias']?>"><?=$pageData['title']?></a>
+
+	</div>
+
+<?php } ?>

@@ -8,6 +8,4 @@ require_once(ROOT.DS.'lib'.DS.'init.php');
 
 App::run($_SERVER['REQUEST_URI']);
 
-$test = App::$db->query('SELECT * FROM pages');
-echo "<pre>";
-print_r($test);
+//$test = App::$db->query('SELECT * FROM pages');

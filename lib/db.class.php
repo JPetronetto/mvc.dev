@@ -1,7 +1,6 @@
 <?php 
 
-Class DB extends PDO
-{
+Class DB extends PDO {
 	
 	private static $instance;
 	
