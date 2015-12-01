@@ -47,16 +47,21 @@ Class DB extends PDO {
 			exit ();
 		}
 
-		if (is_bool($result)) 
+		if (strpos($sql, "SELECT") === FALSE) 
 		{
 			return $result;
 		}
 
 		$data = array();
 
-		while ($row = $result->fetch(PDO::FETCH_ASSOC)) 
-		{
-			$data[] = $row;
+		try {
+			while ($row = $result->fetch(PDO::FETCH_ASSOC)) 
+			{
+				$data[] = $row;
+			}	
+		} catch (Exception $e) {
+			echo 'Could not perform the query. Error: ' . $e->getMessage();
+			exit ();
 		}
 
 		return $data;

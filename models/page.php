@@ -4,7 +4,7 @@ CLass Page extends Model {
 
 	public function getList($onlyPublished = false)
 	{
-		$sql = 	"SELECT * FROM pages";
+		$sql = "SELECT * FROM pages";
 
 		if ($onlyPublished) 
 		{
